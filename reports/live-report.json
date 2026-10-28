@@ -1,0 +1,283 @@
+{
+  "project": "KeptWord",
+  "network": "GenLayer Studionet",
+  "mode": "full (verify path)",
+  "startedAt": "2026-10-28T15:23:04.952Z",
+  "finishedAt": "2026-10-28T15:44:30.597Z",
+  "result": "PASS",
+  "error": null,
+  "contract": {
+    "address": "0x0c002de09871195fb223Dad5b3E89587c2fb346f",
+    "deployTx": null,
+    "version": "1.0.0",
+    "reused": true
+  },
+  "accounts": {
+    "owner": "0xaadA72561544D8A6D9846f8406D555B4C63D14E5",
+    "sponsor": "0xA47B3acABc3D7d12e224EF511bFA8BD0dA6dB04B"
+  },
+  "proofUrl": "https://github.com/vercel/next.js/commits/canary",
+  "steps": [
+    {
+      "name": "read contract version",
+      "ok": true,
+      "seconds": 1,
+      "tx": null,
+      "explorer": null,
+      "execution": null,
+      "status": null
+    },
+    {
+      "name": "owner claims starter points",
+      "ok": true,
+      "seconds": 6,
+      "tx": "0x2d3947ce6b6a0ca4fabfd75bc8bae746db2311e686a6090fdd03c8e30991ea80",
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x2d3947ce6b6a0ca4fabfd75bc8bae746db2311e686a6090fdd03c8e30991ea80",
+      "execution": "unknown",
+      "status": "5"
+    },
+    {
+      "name": "sponsor claims starter points",
+      "ok": true,
+      "seconds": 10,
+      "tx": "0x3c00909c8be13ceef3ff055af0534323fb24d82a2ced28f40b8ff5fa5dc713ba",
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x3c00909c8be13ceef3ff055af0534323fb24d82a2ced28f40b8ff5fa5dc713ba",
+      "execution": "unknown",
+      "status": "5"
+    },
+    {
+      "name": "owner opens a pledge (starts in 6 min, 10-minute window, 1 checkpoint)",
+      "ok": true,
+      "seconds": 27,
+      "tx": "0xd2fa0625ac961959e2f98a43ef01113c2732b5db4c6df91f0196f35b1de39f78",
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xd2fa0625ac961959e2f98a43ef01113c2732b5db4c6df91f0196f35b1de39f78",
+      "execution": "unknown",
+      "status": "5"
+    },
+    {
+      "name": "sponsor backs the pledge with 20 WP",
+      "ok": true,
+      "seconds": 11,
+      "tx": "0x29a6baea58bce48e92e7757a8c923e75bf5219eaa7153330f96513abd3514c94",
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x29a6baea58bce48e92e7757a8c923e75bf5219eaa7153330f96513abd3514c94",
+      "execution": "unknown",
+      "status": "5"
+    },
+    {
+      "name": "wait until the checkpoint can be verified",
+      "ok": true,
+      "seconds": 1142,
+      "tx": null,
+      "explorer": null,
+      "execution": null,
+      "status": null
+    },
+    {
+      "name": "anyone verifies the checkpoint (validators read the proof page)",
+      "ok": true,
+      "seconds": 63,
+      "tx": "0x4a84b1cc716210cc45b3a711c1a5f703c7715db86beefb5711dbb74c6855554d",
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x4a84b1cc716210cc45b3a711c1a5f703c7715db86beefb5711dbb74c6855554d",
+      "execution": "unknown",
+      "status": "5"
+    },
+    {
+      "name": "points are conserved",
+      "ok": true,
+      "seconds": 0,
+      "tx": null,
+      "explorer": null,
+      "execution": null,
+      "status": null
+    }
+  ],
+  "checks": [
+    {
+      "ok": true,
+      "msg": "contract answers get_version (1.0.0)"
+    },
+    {
+      "ok": true,
+      "msg": "owner and sponsor each hold 1000 WP"
+    },
+    {
+      "ok": true,
+      "msg": "pledge #2 exists"
+    },
+    {
+      "ok": true,
+      "msg": "the 50 WP stake is locked"
+    },
+    {
+      "ok": true,
+      "msg": "if KEPT the owner receives stake + sponsor reward (70)"
+    },
+    {
+      "ok": true,
+      "msg": "if BROKEN the sponsor gets 25 and 25 is burned"
+    },
+    {
+      "ok": true,
+      "msg": "the checkpoint was recorded (or deferred because the page was unreachable)"
+    },
+    {
+      "ok": true,
+      "msg": "this run's accounts plus burned points never exceed the points granted"
+    }
+  ],
+  "balances": [
+    {
+      "label": "after claim",
+      "owner": {
+        "balance": 1000,
+        "locked": 0
+      },
+      "sponsor": {
+        "balance": 1000,
+        "locked": 0
+      },
+      "burned": 0,
+      "granted": 4000
+    },
+    {
+      "label": "after open",
+      "owner": {
+        "balance": 950,
+        "locked": 50
+      },
+      "sponsor": {
+        "balance": 1000,
+        "locked": 0
+      },
+      "burned": 0,
+      "granted": 4000
+    },
+    {
+      "label": "after sponsor",
+      "owner": {
+        "balance": 950,
+        "locked": 50
+      },
+      "sponsor": {
+        "balance": 980,
+        "locked": 20
+      },
+      "burned": 0,
+      "granted": 4000
+    },
+    {
+      "label": "after verify",
+      "owner": {
+        "balance": 950,
+        "locked": 50
+      },
+      "sponsor": {
+        "balance": 980,
+        "locked": 20
+      },
+      "burned": 0,
+      "granted": 4000
+    }
+  ],
+  "pledge": {
+    "appeal_deadline": 1793223783,
+    "appeals_used": 0,
+    "checked": 1,
+    "checkpoints": 1,
+    "closed_at": 0,
+    "commitment": "Publish at least one new dated entry on the proof page during the checkpoint window.",
+    "created_at": 1793201003,
+    "fetch_failures": 0,
+    "id": 2,
+    "interval_seconds": 600,
+    "last_attempt_at": 0,
+    "met": 0,
+    "min_items": 1,
+    "min_met": 1,
+    "missed": 1,
+    "owner": "0xaada72561544d8a6d9846f8406d555b4c63d14e5",
+    "proof_url": "https://github.com/vercel/next.js/commits/canary",
+    "sponsor_count": 1,
+    "sponsor_pool": 20,
+    "stake": 50,
+    "start_at": 1793201363,
+    "status": "BREACHED",
+    "title": "KeptWord live run pledge"
+  },
+  "checkpoints": [
+    {
+      "appeal_url": "",
+      "appealed": false,
+      "checked_at": 1793202183,
+      "evidence": "",
+      "evidence_hash": "5a3ffd9c2315c8b713469e49d8c227cec1281ef869fdd1cda18255ff2244eacc",
+      "evidence_len": 3919,
+      "first_reason": "",
+      "id": 1,
+      "index": 0,
+      "items_found": 0,
+      "note": "The page shows commits dated 2026-10-28, but no times placing any new dated entry inside the 15:29–15:39 UTC window.",
+      "outcome": "MISSED",
+      "pledge_id": 2,
+      "reason": "NOT_ENOUGH_EVIDENCE",
+      "verifier": "0xa47b3acabc3d7d12e224ef511bfa8bd0da6db04b"
+    }
+  ],
+  "stats": {
+    "aborted": 0,
+    "appeals": 0,
+    "appeals_won": 0,
+    "broken": 0,
+    "cancelled": 1,
+    "checkpoints_met": 0,
+    "checkpoints_missed": 1,
+    "checkpoints_recorded": 1,
+    "deferred_attempts": 0,
+    "kept": 0,
+    "members": 4,
+    "open_pledges": 1,
+    "points_burned": 0,
+    "points_granted": 4000,
+    "points_locked": 70,
+    "sponsorships": 2,
+    "total_pledges": 2,
+    "version": "1.0.0"
+  },
+  "finality": [
+    {
+      "name": "owner claims starter points",
+      "tx": "0x2d3947ce6b6a0ca4fabfd75bc8bae746db2311e686a6090fdd03c8e30991ea80",
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x2d3947ce6b6a0ca4fabfd75bc8bae746db2311e686a6090fdd03c8e30991ea80",
+      "lastSeenStatus": "FINALIZED",
+      "finalized": true
+    },
+    {
+      "name": "sponsor claims starter points",
+      "tx": "0x3c00909c8be13ceef3ff055af0534323fb24d82a2ced28f40b8ff5fa5dc713ba",
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x3c00909c8be13ceef3ff055af0534323fb24d82a2ced28f40b8ff5fa5dc713ba",
+      "lastSeenStatus": "FINALIZED",
+      "finalized": true
+    },
+    {
+      "name": "owner opens a pledge (starts in 6 min, 10-minute window, 1 checkpoint)",
+      "tx": "0xd2fa0625ac961959e2f98a43ef01113c2732b5db4c6df91f0196f35b1de39f78",
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xd2fa0625ac961959e2f98a43ef01113c2732b5db4c6df91f0196f35b1de39f78",
+      "lastSeenStatus": "FINALIZED",
+      "finalized": true
+    },
+    {
+      "name": "sponsor backs the pledge with 20 WP",
+      "tx": "0x29a6baea58bce48e92e7757a8c923e75bf5219eaa7153330f96513abd3514c94",
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x29a6baea58bce48e92e7757a8c923e75bf5219eaa7153330f96513abd3514c94",
+      "lastSeenStatus": "FINALIZED",
+      "finalized": true
+    },
+    {
+      "name": "anyone verifies the checkpoint (validators read the proof page)",
+      "tx": "0x4a84b1cc716210cc45b3a711c1a5f703c7715db86beefb5711dbb74c6855554d",
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x4a84b1cc716210cc45b3a711c1a5f703c7715db86beefb5711dbb74c6855554d",
+      "lastSeenStatus": "FINALIZED",
+      "finalized": true
+    }
+  ]
+}

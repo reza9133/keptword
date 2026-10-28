@@ -1,0 +1,23 @@
+{
+  "name": "keptword",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "python3 -m unittest discover -s tests -p \"test_*.py\"",
+    "test:fast": "KW_SEEDS=8 python3 -m unittest discover -s tests -p \"test_*.py\"",
+    "mutation": "python3 scripts/mutation_check.py",
+    "deploy": "node e2e/deploy.mjs",
+    "smoke": "node e2e/smoke.mjs",
+    "smoke:verify": "node e2e/smoke.mjs --verify",
+    "live": "node e2e/live.mjs",
+    "live:quick": "node e2e/live.mjs --quick"
+  },
+  "dependencies": {
+    "genlayer-js": "1.2.0",
+    "viem": "2.56.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
